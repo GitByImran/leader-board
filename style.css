@@ -1,0 +1,331 @@
+/* font family  */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #F3F1FF;
+}
+
+/* container for fixed maximum width*/
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* navbar css start */
+
+#navbar {
+    background: #562EFF;
+}
+nav {
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.nav-logo img {
+    width: 55px;
+    height: auto;
+}
+.nav-logo span {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    color: #fafafa;
+    text-transform: capitalize;
+}
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.nav-menu ul li {
+    display: inline-block;
+}
+.nav-menu ul li a {
+    font-size: 20px;
+    color: #fafafa;
+    text-transform: capitalize;
+    margin: 0 20px;
+}
+.nav-profile {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+}
+.nav-profile img {
+    width: 100%;
+    height: 100%;
+}
+
+/* ranking section css start */
+
+#rankings {
+    padding: 35px;
+    margin-top: 50px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+/* player css */
+.players {
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 35px;
+    column-gap: 35px;
+}
+.player {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.player img {
+    width: 75px;
+    height: 75px;
+}
+.player span {
+    font-size: 22px;
+    font-weight: 600;
+}
+hr {
+    margin: 35px 0;
+    border: 1px solid rgb(202, 202, 202);
+}
+
+/* blogs css */
+
+.blogs {
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 35px;
+    column-gap: 35px;
+}
+.blog {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.blog-img {
+    width: 250px;
+    height: auto;
+}
+.blog-img img {
+    width: 100%;
+    height: 100%;
+}
+
+/* course plan */
+
+#latest-courses {
+    padding: 35px;
+    background: #fff;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+#courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 35px;
+}
+.course {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(160, 160, 160, 0.096);
+}
+.course-details .course-img {
+    max-width: 300px;
+    height: auto;
+    object-fit: center;
+}
+.course-details .course-img img {
+    width: 100%;
+    height: 100%;
+}
+.course-details h2 {
+    margin: 10px 0;
+}
+.course-details a {
+    color: rgba(230, 68, 62, 0.87);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* course rating and duration */
+
+.course-details-more {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.course-rating i {
+    font-size: 1em;
+}
+.course-rating .fa-star.fill {
+    color: rgb(240, 216, 2);
+}
+.course-rating .fa-star.blank {
+    color: rgb(214, 214, 214);
+}
+.course-rating span {
+    color: rgb(133, 133, 133);
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+.course-duration {
+    background: rgb(248, 223, 223);
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.course-duration i {
+    color: rgb(252, 77, 77);
+    font-size: 22px;
+}
+.course-duration span {
+    color: rgb(252, 77, 77);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* section title css */
+
+.title {
+    margin-bottom: 50px;
+}
+.title h2 {
+    color: #562EFF;
+    font-size: 30px;
+}
+
+
+@media screen and (max-width: 576px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .nav-profile {
+        display: none;
+    }
+    /*  */
+    .players {
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 35px;
+        column-gap: 35px;
+    }
+    .top-player {
+        text-align: center;
+    }
+    /*  */
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .blog {
+        flex-direction: column;
+        text-align: center;
+    }
+    /*  */
+    #courses {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 35px;
+    }
+    .course {
+        padding: 0;
+    }
+    .course-details-more {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .course-duration {
+        margin-top: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
